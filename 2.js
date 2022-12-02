@@ -36,7 +36,7 @@ function myFunction() {
             }
             if (rem>=100) {
                 if (str1 != '') {
-                    str1 = words[3][r-1] + '-' + str1;
+                    str1 = words[3][r-1] + ' ' + str1;
                 }
                 else
                 str1 = words[3][r-1];
