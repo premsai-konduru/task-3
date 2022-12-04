@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Converter</title>
+    <style>
+        button{
+            cursor: pointer;
+        }
+    </style>
 </head>
+
 <body>
     <form>
         <div>
@@ -16,8 +23,23 @@
         <div>
             <button type="button" id="num" onclick="myFunction()">Convert</button>
         </div>
+        <br>
+        <div>
+            <label for="demo">Number in words: </label>
+            <input type="text" id="demo">
+        </div>
     </form>
-    <p id="demo"></p>
+    
     <script src="./2.js"></script>
 </body>
+<script>
+    var input = document.getElementById("name");
+    input.addEventListener('keypress', function (event) {
+        if (event.key == "Enter") {
+            event.preventDefault();
+            document.getElementById('num').click();
+        }
+    })
+</script>
+
 </html>
